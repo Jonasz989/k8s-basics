@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: damian-dev-cloud-tls
+spec:
+  secretName: damian-dev-cloud
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: damian-dev.cloud
+  dnsNames:
+    - damian-dev.cloud
+    - www.damian-dev.cloud
